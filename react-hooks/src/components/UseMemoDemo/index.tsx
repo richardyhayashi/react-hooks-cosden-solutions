@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { initialItems } from './utils';
 
 interface DemoProps {}
@@ -7,7 +7,10 @@ const UseMemoDemo = ({}: DemoProps) => {
    const [count, setCount] = useState(0);
    const [items] = useState(initialItems);
 
-   const selectedItem = items.find((item) => item.isSelected);
+   const selectedItem = useMemo(
+    () => items.find((item) => item.id === count),
+    [count, items]
+  );
 
   return (
     <div className='tutorial'>
