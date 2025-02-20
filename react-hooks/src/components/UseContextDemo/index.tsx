@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Dashboard from './Dashboard';
+import { DashboardContext } from './context';
 
 export interface User {
    name: string;
@@ -16,7 +17,9 @@ const UseContextDemo = ({}: DemoProps) => {
 
   return (
     <div>
-      <Dashboard user={user} />
+      <DashboardContext.Provider value={user}>
+        <Dashboard />
+      </DashboardContext.Provider>
     </div>
   );
 };

@@ -1,10 +1,11 @@
-import { User } from '.';
+import { useUserContext } from './context';
 
-interface ProfileProps {
-   user: User
-}
 
-const Profile = ({ user }: ProfileProps) => {
+interface ProfileProps {}
+
+const Profile = ({}: ProfileProps) => {
+   const user = useUserContext();
+   
   return (
     <div>{user.name}</div>
   );

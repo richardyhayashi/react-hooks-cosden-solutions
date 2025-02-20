@@ -1,10 +1,10 @@
-import { User } from ".";
+import { useUserContext } from "./context";
 
-interface SidebarProps {
-   user: User;
-}
+interface SidebarProps {}
 
-const Sidebar = ({ user }: SidebarProps) => {
+const Sidebar = ({}: SidebarProps) => {
+   const user = useUserContext();
+
   return (
     <div>
       <div>{user.name}</div>

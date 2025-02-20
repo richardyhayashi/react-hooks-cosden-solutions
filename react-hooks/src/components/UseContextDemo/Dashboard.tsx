@@ -1,16 +1,13 @@
-import { User } from '.';
 import Profile from './Profile';
 import Sidebar from './Sidebar';
 
-interface DashboardProps {
-  user: User;
-}
+interface DashboardProps {}
 
-const Dashboard = ({user}: DashboardProps) => {
+const Dashboard = ({}: DashboardProps) => {
    return (
       <div>
-         <Sidebar user={user} />
-         <Profile user={user} />
+         <Sidebar />
+         <Profile />
       </div>
    );
 };
