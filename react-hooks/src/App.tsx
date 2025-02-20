@@ -1,5 +1,6 @@
 import UseContextDemo from "./components/UseContextDemo"
 import UseEffectDemo from "./components/UseEffectDemo"
+import UseMemoDemo from "./components/UseMemoDemo"
 import UseStateDemo from "./components/UseStateDemo"
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
     {/*<UseStateDemo />*/}
     {/*<UseEffectDemo />*/}
-    <UseContextDemo />
+    <UseMemoDemo />
+    {/*<UseContextDemo />*/}
     </>
   )
 }
